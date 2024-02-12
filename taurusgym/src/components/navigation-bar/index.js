@@ -1,28 +1,23 @@
-import React, { useState } from 'react';
+import React from 'react';
 import './styles.css';
 
-const NavigationBar = () => {
 
-
-
-
+const NavigationBar = ({onPressCallback}) => {
   return (
-    <div className ='container'>
+    <div className ='container-nav-bar'>
 
       <div className='container-logo'>
-        <img id='logo' src="/logo01.png" alt="logo" />
+        <img  onClick={() => onPressCallback('')} id='logo' src="/logo01.png" alt="logo" />
       </div>
-
 
       <div className='options'>
         <ul className='menu'>
-          <li><button className='btn-nav'>TRAPÉZIO</button></li>
-          <li><button className='btn-nav'>OMBRO</button></li>
-          <li><button className='btn-nav'>PEITO</button></li>
-          <li><button className='btn-nav'>BRAÇO</button></li>
-          <li><button className='btn-nav'>ABDÓMEN</button></li>
-          <li><button className='btn-nav'>COSTAS</button></li>
-          <li><button className='btn-nav'>PERNA</button></li>
+          <li><button className='btn-nav' onClick={() => onPressCallback('OMBRO')}>OMBRO</button></li>
+          <li><button className='btn-nav' onClick={() => onPressCallback('PEITO')}>PEITO</button></li>
+          <li><button className='btn-nav' onClick={() => onPressCallback('BRACO')}>BRAÇO</button></li>
+          <li><button className='btn-nav' onClick={() => onPressCallback('ABDOMEN')}>ABDÓMEN</button></li>
+          <li><button className='btn-nav' onClick={() => onPressCallback('COSTAS')}>COSTAS</button></li>
+          <li><button className='btn-nav' onClick={() => onPressCallback('PERNA')}>PERNA</button></li>
         </ul>
       </div>
       
